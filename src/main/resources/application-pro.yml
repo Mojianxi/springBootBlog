@@ -1,0 +1,21 @@
+spring:
+  datasource:
+#    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/cost?serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: 123456
+    jpa:
+      hibernate:
+#       自动更新同步表结构;created模式容易造成数据丢失
+        ddl-auto: none
+        show-sql: true
+
+logging:
+  level:
+    root: warn
+    com.mojianxi: info
+  file: log/blog-pro.log
+
+server:
+  port: 8081

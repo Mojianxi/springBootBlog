@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/blog?useUnicode=true&serverTimezone=GMT%2B8&characterEncoding=utf-8
+    username: root
+    password: 123456
+    jpa:
+      hibernate:
+#      自动更新同步表结构;created模式容易造成数据丢失
+        ddl-auto: update
+        show-sql: true
+
+logging:
+  level:
+    root: info
+    com.mojianxi: debug
+  file: log/blog-dev.log
+
+server:
+  port: 8080
